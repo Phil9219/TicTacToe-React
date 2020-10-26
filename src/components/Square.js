@@ -1,12 +1,12 @@
 import "./square.css";
-import React from "react";
+import React, { useState } from "react";
 
 export default function Square(props) {
-  return <button className="square">{props.value}</button>;
+  const [value, setValue] = useState(null);
+
+  return (
+    <button className="square" onClick={() => setValue("X")}>
+      {value}
+    </button>
+  );
 }
-
-// ist das selbe!
-
-// export default function Square({ value }) {
-//   return <button className="square">{value}</button>;
-// }
