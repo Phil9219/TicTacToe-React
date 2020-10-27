@@ -2,11 +2,11 @@ import "./square.css";
 import React, { useState } from "react";
 
 export default function Square(props) {
-  const [value, setValue] = useState(null);
+  // const [props.value, props.onClick] = (null);
 
   return (
-    <button className="square" onClick={() => setValue("X")}>
-      {value}
+    <button className="square" onClick={() => props.onClick("🐼")}>
+      {props.value}
     </button>
   );
 }
